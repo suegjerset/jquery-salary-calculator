@@ -36,6 +36,21 @@ function addEmployee() {
 
 function displayEmployee() {
     console.log( 'in displayEmployee');
+    // target output ul by ID
+    let el = $('#employeeOutput');
+    // empty ul
+    el.empty();
+    // loop through employees array
+    for ( employee of employees ) {
+        // append each item to ul
+        el.append(`<li>
+        ${ employee.first }
+        ${ employee.last }
+        ${ employee.id }
+        ${ employee.title }
+        ${ employee.salary }
+        </li>`)
+    } // end for
 } // end displayEmployee
 
 function readyNow() {
