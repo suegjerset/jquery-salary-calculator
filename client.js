@@ -13,7 +13,7 @@ function addEmployee() {
         alert('all fields are required')
     } // end check input boxes
     else {
-        // get user inputs & place into an object
+        // get user input & place into an array of objects
         let employeeToAdd = {
             first: $('#firstNameInput').val(),
             last: $('#lastNameInput').val(),
@@ -51,29 +51,41 @@ function calculateMonthlyCost() {
     // empty it
     el.empty();
     // append to DOM
+    if ( monthlyCost >= 20000 ) {
+        el.append( monthlyCost ).addClass('red');
+    } else
     el.append( monthlyCost );
+    // add click listener
+    $('.deleteEmployeeButton').on('click', deleteEmployee);
 } // end calculateMonthlyCost
 
 function displayEmployee() {
-    console.log( 'in displayEmployee');
+    console.log('in displayEmployee');
     // target output ul by ID
-    let el = $('#employeeOutput');
+    let el = $('#tableBody');
     // empty ul
     el.empty();
     // loop through employees array
-    for ( employee of employees ) {
-        // append each item to ul
-        el.append(`<li>
-        ${ employee.first }
-        ${ employee.last }
-        ${ employee.id }
-        ${ employee.title }
-        ${ employee.salary }
-        </li>`)
+    for (employee of employees) {
+        // append each item to table
+        el.append(`<tr>
+        <td>${ employee.first}</td>
+        <td>${ employee.last}</td>
+        <td>${ employee.id}</td>
+        <td>${ employee.title}</td>
+        <td>${ employee.salary}</td>
+        <td><button class="deleteEmployeeButton">Delete</button></td>
+        </tr>`)
     } // end for
     // calculate total monthly cost
     calculateMonthlyCost();
 } // end displayEmployee
+
+function deleteEmployee() {
+    console.log( ' in deleteEmployee' );
+    // removes entire row of table when clicked
+    $(this).parent().parent().remove();
+}
 
 function readyNow() {
     console.log( 'JQ loaded!' );

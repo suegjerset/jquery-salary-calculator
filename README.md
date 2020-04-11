@@ -15,8 +15,8 @@ Create a delete button that removes an employee from the DOM. For Base mode, it 
 [x] base: append employee data to the DOM
 [x] base: clear input fields
 [x] base: calculate total monthly salary cost and append to the DOM
-[ ] base: add red background color to total if monthly cost is greater than $20K
-[ ] base: create a "delete" button to remove employee from DOM
+[x] base: add red background color to total if monthly cost is greater than $20K
+[x] base: create a "delete" button that removes an employee from DOM
 [ ] stretch: add styling or extra functionality
 [ ] stretch: display employee data on DOM in table format
 [ ] stretch: subtract deleted employee salary from total monthly cost
