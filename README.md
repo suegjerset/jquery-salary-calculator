@@ -18,7 +18,7 @@ Create a delete button that removes an employee from the DOM. For Base mode, it 
 [x] base: add red background color to total if monthly cost is greater than $20K
 [x] base: create a "delete" button that removes an employee from DOM
 [ ] stretch: add styling or extra functionality
-[ ] stretch: display employee data on DOM in table format
+[x] stretch: display employee data on DOM in table format
 [ ] stretch: subtract deleted employee salary from total monthly cost
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
