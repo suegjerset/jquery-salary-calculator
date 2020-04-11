@@ -34,6 +34,26 @@ function addEmployee() {
     } // end user inputs
 } // end addEmployee
 
+function calculateMonthlyCost() {
+    console.log( 'in calculateMonthlyCost' );
+    // loop through employees array
+    let totalSalaries = 0;
+    for ( employee of employees ) {
+        // for each employee, add up all annual salaries
+        totalSalaries += Number(employee.salary);
+    } // end for loop
+    console.log( 'totalSalaries: $', totalSalaries );
+    // divide totalSalaries by 12 to get monthly cost
+    let monthlyCost = totalSalaries / 12;
+    // display monthlyCost
+    // target element by id
+    let el = $( '#totalCostOutput' );
+    // empty it
+    el.empty();
+    // append to DOM
+    el.append( monthlyCost );
+} // end calculateMonthlyCost
+
 function displayEmployee() {
     console.log( 'in displayEmployee');
     // target output ul by ID
@@ -51,6 +71,8 @@ function displayEmployee() {
         ${ employee.salary }
         </li>`)
     } // end for
+    // calculate total monthly cost
+    calculateMonthlyCost();
 } // end displayEmployee
 
 function readyNow() {
