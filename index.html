@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
     <script src="client.js"></script>
     <title>Salary Calculator</title>
 </head>
-<body>
+
+<body class="container">
     <header>
         <h1>jQuery Salary Calculator</h1>
     </header>
@@ -23,29 +25,27 @@
             <button id="addEmployeeButton">Submit</button>
         </div>
         <div id="employeeTable">
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Annual Salary</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <tr></tr>
-            </tbody>
-        </table>
+            <h2>Employees:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr></tr>
+                </tbody>
+            </table>
         </div>
-        <!-- <div id="outputDiv">
-            <h2>Employee:</h2>
-                <ul id="employeeOutput"></ul>
-        </div> -->
         <div id="totalCostDiv">
-            <h2>Total Monthly Cost: $<span id="totalCostOutput"></span></h2>
+            <h3>Total Monthly Cost: $<span id="totalCostOutput"></span></h2>
         </div>
-    </main>  
+    </main>
 </body>
+
 </html>

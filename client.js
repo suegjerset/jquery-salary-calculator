@@ -52,7 +52,7 @@ function calculateMonthlyCost() {
     el.empty();
     // append to DOM
     if ( monthlyCost >= 20000 ) {
-        el.append(monthlyCost.toLocaleString('en-US') ).addClass('red');
+        el.append( monthlyCost.toLocaleString('en-US') ).addClass('red');
     } else
     el.append( monthlyCost.toLocaleString('en-US') );
     // add click listener
