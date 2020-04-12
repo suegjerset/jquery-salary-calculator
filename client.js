@@ -54,7 +54,7 @@ function calculateMonthlyCost() {
     if ( monthlyCost > 20000 ) {
         el.append( monthlyCost.toLocaleString('en-US') ).addClass('red');
     } else
-    el.append( monthlyCost.toLocaleString('en-US') );
+    el.append( monthlyCost.toLocaleString('en-US') ).removeClass('red');
     // add click listener
     $('.deleteEmployeeButton').on('click', deleteEmployee);
 } // end calculateMonthlyCost
@@ -83,12 +83,17 @@ function displayEmployee() {
 
 function deleteEmployee() {
     console.log( ' in deleteEmployee' );
-    // removes entire table row of data when "delete" button is clicked
-    $(this).closest('tr').remove();
+    // assign variable to the table row clicked on
+    let item = $(this).closest('tr');
+    // targets object in employees array 
+    employees.splice(item.index(), 1);
+    // removes the selected employee
+    item.remove();
     console.log( ' employee removed' );
-    // remove employee from employee array
-    // calculate new monthly cost
-    // call function calculateMonthlyCost()
+    // re-display employee list to DOM
+    displayEmployee();
+    // re-display new monthly cost to DOM
+    calculateMonthlyCost()
 }
 
 function readyNow() {
