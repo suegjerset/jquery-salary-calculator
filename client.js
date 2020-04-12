@@ -51,7 +51,7 @@ function calculateMonthlyCost() {
     // empty it
     el.empty();
     // append to DOM
-    if ( monthlyCost >= 20000 ) {
+    if ( monthlyCost > 20000 ) {
         el.append( monthlyCost.toLocaleString('en-US') ).addClass('red');
     } else
     el.append( monthlyCost.toLocaleString('en-US') );
@@ -83,13 +83,16 @@ function displayEmployee() {
 
 function deleteEmployee() {
     console.log( ' in deleteEmployee' );
-    // removes entire row of table when clicked
-    $(this).parent().parent().remove();
+    // removes entire table row of data when "delete" button is clicked
+    $(this).closest('tr').remove();
     console.log( ' employee removed' );
+    // remove employee from employee array
+    // calculate new monthly cost
+    // call function calculateMonthlyCost()
 }
 
 function readyNow() {
     console.log( 'JQ loaded!' );
-    // click listener
+    // add click listener
     $('#addEmployeeButton').on('click', addEmployee);
 } // end readyNow

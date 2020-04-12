@@ -6,7 +6,7 @@
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
-Create an application that records employee salaries and adds salaries up to report monthly costs.
+Created an application that records employee salaries and adds salaries up to report monthly costs. If costs exceed $20,000, the 
 
 Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
 
